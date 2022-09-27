@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bstonetech.nestedrecycler.R
@@ -22,16 +23,16 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
             categoryTitle = itemView.findViewById(R.id.title)
             itemRecycler = itemView.findViewById(R.id.cat_item_row)
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainviewHolder {
         return MainviewHolder((LayoutInflater.from(context).inflate(R.layout.main_recycler_row_item,parent,false)))
     }
-
     override fun onBindViewHolder(holder: MainviewHolder, position: Int) {
         holder.categoryTitle.text = allcategorie[position].CaterieTitle
-
+        holder.categoryTitle.setOnClickListener {
+            Toast.makeText(context, "vous avez clique ici $position ", Toast.LENGTH_SHORT).show()
+        }
         setcateItemRecycler(holder.itemRecycler, allcategorie[position].categorItem)
     }
 
@@ -40,10 +41,8 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     }
 
     private fun setcateItemRecycler(recyclerView: RecyclerView, categoryItem: List<CategoryItem>){
-
         val itemRecyclerAdapter = ChildcategorieAdapter(context,categoryItem)
         recyclerView.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
-
         recyclerView.adapter = itemRecyclerAdapter
 
     }
