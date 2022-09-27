@@ -2,6 +2,7 @@ package com.bstonetech.nestedrecycler.adapter
 
 import android.content.Context
 import android.media.Image
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -22,7 +23,8 @@ class ChildcategorieAdapter(private val context: Context, private val categoryIt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatViewHolder {
-        TODO("Not yet implemented")
+        return CatViewHolder(LayoutInflater.from(context).inflate(R.layout.row_cat,parent,false))
+
     }
 
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
