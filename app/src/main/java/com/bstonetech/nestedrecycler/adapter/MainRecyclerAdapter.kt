@@ -14,8 +14,11 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
 
     class MainviewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
          var categoryTitle:TextView? = null
+        var itemRecycler:RecyclerView? = null
+
         init {
             categoryTitle = itemView.findViewById(R.id.title)
+            itemRecycler = itemView.findViewById(R.id.cat_item_row)
         }
 
     }
@@ -31,4 +34,5 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     override fun getItemCount(): Int {
         return allcategorie.size
     }
+
 }
