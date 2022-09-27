@@ -17,6 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val allcategorie:MutableList<Allcategorie> = ArrayList()
+        allcategorie.add(Allcategorie("Holywood"))
+        allcategorie.add(Allcategorie("nolywood"))
+        allcategorie.add(Allcategorie("Bollywood"))
+        allcategorie.add(Allcategorie("Holywood"))
+        allcategorie.add(Allcategorie("Holywood"))
+
+        setMainCategoriRecycler(allcategorie)
+
     }
     private fun setMainCategoriRecycler(allcategorie: List<Allcategorie>){
         mainrecycler = findViewById(R.id.my_recycler)
