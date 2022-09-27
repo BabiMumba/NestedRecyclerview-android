@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bstonetech.nestedrecycler.R
 import com.bstonetech.nestedrecycler.model.Allcategorie
@@ -14,8 +15,8 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     RecyclerView.Adapter<MainRecyclerAdapter.MainviewHolder>() {
 
     class MainviewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-         var categoryTitle:TextView? = null
-        var itemRecycler:RecyclerView? = null
+         var categoryTitle:TextView
+        var itemRecycler:RecyclerView
 
         init {
             categoryTitle = itemView.findViewById(R.id.title)
@@ -29,7 +30,9 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     }
 
     override fun onBindViewHolder(holder: MainviewHolder, position: Int) {
-        holder.categoryTitle!!.text = allcategorie[position].CaterieTitle
+        holder.categoryTitle.text = allcategorie[position].CaterieTitle
+
+        setcateItemRecycler(holder.itemRecycler, allcategorie[position].categorItem)
     }
 
     override fun getItemCount(): Int {
@@ -37,6 +40,11 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     }
 
     private fun setcateItemRecycler(recyclerView: RecyclerView, categoryItem: List<CategoryItem>){
+
+        val itemRecyclerAdapter = ChildcategorieAdapter(context,categoryItem)
+        recyclerView.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
+
+        recyclerView.adapter = itemRecyclerAdapter
 
     }
 
