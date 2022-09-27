@@ -28,7 +28,7 @@ class ChildcategorieAdapter(private val context: Context, private val categoryIt
     }
 
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.itemImage.setImageResource(categoryItem[position].imageUrl)
     }
 
     override fun getItemCount(): Int {
