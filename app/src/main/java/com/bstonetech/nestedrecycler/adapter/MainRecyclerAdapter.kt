@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bstonetech.nestedrecycler.R
 import com.bstonetech.nestedrecycler.model.Allcategorie
+import com.bstonetech.nestedrecycler.model.CategoryItem
 
 class MainRecyclerAdapter(private val context: Context, private val allcategorie: List<Allcategorie>):
     RecyclerView.Adapter<MainRecyclerAdapter.MainviewHolder>() {
@@ -33,6 +34,10 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
 
     override fun getItemCount(): Int {
         return allcategorie.size
+    }
+
+    private fun setcateItemRecycler(recyclerView: RecyclerView, categoryItem: List<CategoryItem>){
+
     }
 
 }
