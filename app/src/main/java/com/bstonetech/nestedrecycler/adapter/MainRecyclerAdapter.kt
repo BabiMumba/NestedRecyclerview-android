@@ -15,7 +15,7 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainviewHolder {
-        return MainviewHolder((LayoutInflater.from(context).inflate(R.layout)))
+        return MainviewHolder((LayoutInflater.from(context).inflate(R.layout.main_recycler_row_item,parent,false)))
     }
 
     override fun onBindViewHolder(holder: MainviewHolder, position: Int) {
