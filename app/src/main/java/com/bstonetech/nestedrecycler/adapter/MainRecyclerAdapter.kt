@@ -13,7 +13,7 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     RecyclerView.Adapter<MainRecyclerAdapter.MainviewHolder>() {
 
     class MainviewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        private var categoryTitle:TextView? = null
+         var categoryTitle:TextView? = null
         init {
             categoryTitle = itemView.findViewById(R.id.title)
         }
@@ -25,7 +25,7 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     }
 
     override fun onBindViewHolder(holder: MainviewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.categoryTitle!!.text = allcategorie[position].CaterieTitle
     }
 
     override fun getItemCount(): Int {
