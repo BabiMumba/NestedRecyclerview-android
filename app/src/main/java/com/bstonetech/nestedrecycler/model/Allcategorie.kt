@@ -1,4 +1,3 @@
 package com.bstonetech.nestedrecycler.model
 
-class Allcategorie {
-}
+class Allcategorie(var CaterieTitle:String)
