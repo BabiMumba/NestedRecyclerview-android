@@ -28,11 +28,11 @@ class MainActivity : AppCompatActivity() {
         categoryItemList.add(CategoryItem(1,R.drawable.zero1))
 
         val allcategorie:MutableList<Allcategorie> = ArrayList()
-        allcategorie.add(Allcategorie("Holywood"))
-        allcategorie.add(Allcategorie("nolywood"))
-        allcategorie.add(Allcategorie("Bollywood"))
-        allcategorie.add(Allcategorie("Holywood"))
-        allcategorie.add(Allcategorie("Holywood"))
+        allcategorie.add(Allcategorie("Holywood",categoryItemList))
+        allcategorie.add(Allcategorie("nolywood",categoryItemList))
+        allcategorie.add(Allcategorie("Bollywood",categoryItemList))
+        allcategorie.add(Allcategorie("Holywood",categoryItemList))
+        allcategorie.add(Allcategorie("Holywood",categoryItemList))
 
         setMainCategoriRecycler(allcategorie)
 
