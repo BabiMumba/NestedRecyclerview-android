@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bstonetech.nestedrecycler.adapter.MainRecyclerAdapter
 import com.bstonetech.nestedrecycler.model.Allcategorie
+import com.bstonetech.nestedrecycler.model.CategoryItem
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +17,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        val categoryItemList:MutableList<CategoryItem> = ArrayList()
+
+        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
+        categoryItemList.add(CategoryItem(1,R.drawable.influa))
+        categoryItemList.add(CategoryItem(1,R.drawable.pour_le_nul))
+        categoryItemList.add(CategoryItem(1,R.drawable.semaine))
+        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
 
         val allcategorie:MutableList<Allcategorie> = ArrayList()
         allcategorie.add(Allcategorie("Holywood"))
