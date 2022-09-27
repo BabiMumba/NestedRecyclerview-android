@@ -20,19 +20,37 @@ class MainActivity : AppCompatActivity() {
 
 
         val categoryItemList:MutableList<CategoryItem> = ArrayList()
+        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
+        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
+        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
+        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
+        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
 
-        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
-        categoryItemList.add(CategoryItem(1,R.drawable.influa))
-        categoryItemList.add(CategoryItem(1,R.drawable.pour_le_nul))
-        categoryItemList.add(CategoryItem(1,R.drawable.semaine))
-        categoryItemList.add(CategoryItem(1,R.drawable.zero1))
+        //groupe 2
+        val categoryItemList2:MutableList<CategoryItem> = ArrayList()
+        categoryItemList2.add(CategoryItem(1,R.drawable.influa))
+        categoryItemList2.add(CategoryItem(1,R.drawable.influa))
+        categoryItemList2.add(CategoryItem(1,R.drawable.influa))
+        categoryItemList2.add(CategoryItem(1,R.drawable.influa))
+        categoryItemList2.add(CategoryItem(1,R.drawable.influa))
+        categoryItemList2.add(CategoryItem(1,R.drawable.influa))
+
+        //groupe 3
+        val categoryItemList3:MutableList<CategoryItem> = ArrayList()
+        categoryItemList3.add(CategoryItem(1,R.drawable.pour_le_nul))
+        categoryItemList3.add(CategoryItem(1,R.drawable.pour_le_nul))
+        categoryItemList3.add(CategoryItem(1,R.drawable.pour_le_nul))
+        categoryItemList3.add(CategoryItem(1,R.drawable.pour_le_nul))
+        categoryItemList3.add(CategoryItem(1,R.drawable.pour_le_nul))
+
 
         val allcategorie:MutableList<Allcategorie> = ArrayList()
+
         allcategorie.add(Allcategorie("Holywood",categoryItemList))
         allcategorie.add(Allcategorie("nolywood",categoryItemList))
-        allcategorie.add(Allcategorie("Bollywood",categoryItemList))
+        allcategorie.add(Allcategorie("Bollywood",categoryItemList2))
         allcategorie.add(Allcategorie("Holywood",categoryItemList))
-        allcategorie.add(Allcategorie("Holywood",categoryItemList))
+        allcategorie.add(Allcategorie("Holywood",categoryItemList3))
 
         setMainCategoriRecycler(allcategorie)
 
