@@ -28,7 +28,9 @@ class ChildcategorieAdapter(private val context: Context, private var categoryIt
 
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
         holder.itemImage.setImageResource(categoryItem[position].imageUrl)
-
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context, "salut", Toast.LENGTH_SHORT).show()
+        }
     }
     override fun getItemCount(): Int {
         return categoryItem.size
