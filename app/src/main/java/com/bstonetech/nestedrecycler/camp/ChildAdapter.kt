@@ -23,7 +23,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bstonetech.nestedrecycler.R
 
-
 class ChildAdapter : RecyclerView.Adapter<ChildAdapter.VH>() {
 
     private var items = listOf<String>()
