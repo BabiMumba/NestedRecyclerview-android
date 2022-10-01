@@ -30,9 +30,7 @@ class MainRecyclerAdapter(private val context: Context, private val allcategorie
     }
     override fun onBindViewHolder(holder: MainviewHolder, position: Int) {
         holder.categoryTitle.text = allcategorie[position].CaterieTitle
-        holder.categoryTitle.setOnClickListener {
-            Toast.makeText(context, "vous avez clique ici $position ", Toast.LENGTH_SHORT).show()
-        }
+
         setcateItemRecycler(holder.itemRecycler, allcategorie[position].categorItem)
     }
 

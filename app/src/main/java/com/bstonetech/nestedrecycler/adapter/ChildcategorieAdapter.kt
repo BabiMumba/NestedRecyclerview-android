@@ -1,7 +1,6 @@
 package com.bstonetech.nestedrecycler.adapter
 
 import android.content.Context
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +12,13 @@ import com.bstonetech.nestedrecycler.model.CategoryItem
 
 class ChildcategorieAdapter(private val context: Context, private var categoryItem: List<CategoryItem>): RecyclerView.Adapter<ChildcategorieAdapter.CatViewHolder>() {
 
+    interface OnItemClickListener {
+        fun onItemClick(childPosition:Int)
+    }
+
+    interface RvItemClickListener {
+        fun onChildItemClick(parentPosition: Int, childPosition: Int, item: String?)
+    }
 
     class CatViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         var itemImage:ImageView
